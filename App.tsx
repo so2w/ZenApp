@@ -1,7 +1,7 @@
 import './global.css';
 
 import { useEffect, useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, Modal, ScrollView, Animated } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, Modal, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { supabase } from './lib/supabase';
 
@@ -103,7 +103,7 @@ export default function App() {
   return (
     <View className="flex-1 bg-zen-dark pt-16 pb-8">
       <Text className="text-zen-gold text-4xl font-serif text-center mb-2">Zen Tarot</Text>
-      <Text className="text-zen-cream opacity-80 text-center mb-8 font-light italic px-4 px-6 text-sm">
+      <Text className="text-zen-cream opacity-80 text-center mb-8 font-light italic px-6 text-sm">
         Concéntrate en tu respiración. Selecciona una carta cuando sientas el impulso.
       </Text>
 
@@ -117,7 +117,7 @@ export default function App() {
           <TouchableOpacity
             onPress={() => handleCardPress(item)}
             activeOpacity={0.8}
-            className="bg-black border border-zen-gold/40 rounded-xl p-4 flex-1 mx-2 aspect-[2/3] items-center justify-center shadow-lg hover:bg-zinc-900 transition-colors"
+            className="bg-black border border-zen-gold/40 rounded-xl p-4 flex-1 mx-2 aspect-[2/3] items-center justify-center"
           >
             <View className="w-14 h-14 rounded-full border border-zen-gold/60 items-center justify-center mb-4">
               <Text className="text-zen-gold text-xl">❖</Text>
